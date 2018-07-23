@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="splash_image_size">240dp</dimen>
+    <dimen name="splash_image_margin">32dp</dimen>
+</resources>

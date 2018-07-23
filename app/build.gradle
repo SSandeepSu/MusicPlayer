@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "0.1"
+    }
+    buildTypes {
+        debug {
+            shrinkResources false
+            minifyEnabled false
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "ad"
+    productFlavors {
+        free {
+            dimension "ad"
+            applicationId "eggwhite.theminimalplayer.free"
+            versionName "0.1-free"
+        }
+        noad {
+            dimension "ad"
+            applicationId "eggwhite.theminimalplayer.noad"
+            versionName "0.1-noad"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TheMinimalPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="music_art_content_desc">Album Art</string>
+</resources>
